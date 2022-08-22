@@ -43,6 +43,9 @@
 
 .weather-info {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -50,4 +53,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 300px;
+  line-height: 0;
+}
+
+.weather-info-item {
+  width: 50%;
+}
+
+.weather-info-item:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+#temperature {
+  font-size: 120px;
+}
+
+#st {
+  font-size: 48px;
+}
+
+.hello-header {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 48px;
+  color: white;
 }
