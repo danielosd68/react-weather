@@ -82,3 +82,27 @@
   font-size: 48px;
   color: white;
 }
+
+.form form {
+  background-color: white;
+  height: 40px;
+  display: flex;
+  margin-left: 50px;
+}
+
+.city {
+  border: none;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.city:focus {
+  outline: none;
+}
+
+.form form button {
+  background-color: white;
+  border: none;
+  width: 50px;
+}

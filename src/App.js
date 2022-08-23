@@ -10,7 +10,7 @@ function App() {
   const [isFormActive, setFormActive] = useState(false);
 
   const checkWeather = (city) => {
-  
+
     fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API}`)
       .then((response) => {
         console.log(response.promiseStatus);
@@ -27,6 +27,12 @@ function App() {
     <div className="App">
       <div className="icon">
         <i className="bi bi-binoculars" onClick={() => { setFormActive(!isFormActive) }}></i>
+        {isFormActive !== false ? <div className="form">
+          <form>
+            <input className="city" name="city" onChange={(e) => { setInput(e.target.value) }} />
+            <button onClick={(e) => { e.preventDefault(); checkWeather(input) }}><i className="bi bi-search"></i></button>
+          </form>
+        </div> : ""}
       </div>
       {weather === false ? <h1 className="hello-header">Witaj! Sprawdź aktualną pogodę!</h1> : <>
 
@@ -34,12 +40,7 @@ function App() {
           <Weather city={weather} />
         </div>
       </>}
-      {isFormActive !== false ? <div className="form">
-        <form>
-          <input className="city" name="city" onChange={(e) => { setInput(e.target.value) }} />
-          <button onClick={(e) => { e.preventDefault(); checkWeather(input) }}>Sprawdź pogodę</button>
-        </form>
-      </div> : ""}
+
     </div>
   )
 
