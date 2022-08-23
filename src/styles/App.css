@@ -92,6 +92,22 @@
   margin-left: 50px;
 }
 
+@media (max-width:500px) {
+  .form form {
+    width: 50vw;
+
+  }
+
+  .icon {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .city {
+    width: calc(100% - 50px);
+  }
+}
+
 .form form.error {
   border: 2px solid rgb(253, 94, 94);
 }
