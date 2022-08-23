@@ -92,12 +92,18 @@
   margin-left: 50px;
 }
 
+.form form.error {
+  border: 2px solid rgb(253, 94, 94);
+}
+
 .city {
   border: none;
   box-sizing: border-box;
   padding: 10px;
   font-size: 22px;
 }
+
+
 
 .city:focus {
   outline: none;
