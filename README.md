@@ -1,3 +1,22 @@
+# React Project - Weather App (with Openweathermap API)
+
+## Main informations:
+ [PL]: Prosta aplikacja służąca do sprawdzania obecnej pogody.\
+ [EN]: An easy app for checking the weather.
+
+### Zastosowane technologie:
+`HTML` `CSS` `React` `API from openweathermap`\
+\
+Uwaga! Klucz API obecny w kodzie jest nieaktywny, należy wejść na stronę https://openweathermap.org/api , założyć konto, pobrać swój klucz i w pliku "App.js" zmienić zawartość zmiennej API na swój klucz!
+
+### Used technologies:
+`HTML` `CSS` `React` `API from openweathermap`\
+\
+Warning! The API key from source kode is unavailable. You must to visit https://openweathermap.org/api site, register and download your API key. In "App.js" file you have to change variable from the old key to your API key from account!
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
