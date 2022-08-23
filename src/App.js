@@ -14,41 +14,44 @@ function App() {
   const checkWeather = (city) => {
     setWeather(false);
     setDataStatus(!dataStatus);
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API}`)
-      .then((response) => {
-        const data = response.json();
-        let city = null;
-        let description = null;
-        let temperature = null;
-        data
-          .then((res) => {
-            city = res[0].name;
-            const lat = res[0].lat;
-            const lon = res[0].lon;
-            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}&lang=pl&units=metric`)
-              .then((response) => {
-                const data = response.json();
+    setTimeout(() => {
+      fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API}`)
+        .then((response) => {
+          const data = response.json();
+          let city = null;
+          let description = null;
+          let temperature = null;
+          data
+            .then((res) => {
+              city = res[0].name;
+              const lat = res[0].lat;
+              const lon = res[0].lon;
+              fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}&lang=pl&units=metric`)
+                .then((response) => {
+                  const data = response.json();
 
-                data
-                  .then((res) => {
+                  data
+                    .then((res) => {
 
-                    const data = {
-                      city: city,
-                      description: res.weather[0].description,
-                      temperature: Math.floor(res.main.temp)
-                    }
+                      const data = {
+                        city: city,
+                        description: res.weather[0].description,
+                        temperature: Math.floor(res.main.temp)
+                      }
 
-                    setWeather(data);
-                    setDataStatus(false);
-                  })
+                      setWeather(data);
+                      setDataStatus(false);
+                    })
 
-              })
-              .catch((err) => { alert(`Błąd: ${err}`) })
+                })
+                .catch((err) => { alert(`Błąd: ${err}`) })
 
 
-          })
-          .catch(err => console.error(err))
-      })
+            })
+            .catch(err => console.error(err))
+        })
+    }, 2500)
+
   }
 
 
