@@ -159,3 +159,39 @@
 .loading img {
   animation: loading-circle 3s infinite;
 }
+
+.error-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.644);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-content {
+  width: 500px;
+  height: 200px;
+  background-color: rgb(99, 98, 98);
+  color: white;
+  padding: 50px;
+}
+
+#error-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#error-btn:hover {
+  background-color: grey;
+}
