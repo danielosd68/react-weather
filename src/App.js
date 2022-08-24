@@ -5,8 +5,14 @@ import Weather from './components/weather';
 import './logo.svg';
 const API = "5f924e66209d86f699933ccbf1072991";
 
+
+
+if (localStorage.getItem('weather-data') === null) {
+  localStorage.setItem('weather-data', false);
+}
+
 function App() {
-  const [weather, setWeather] = useState(false);
+  const [weather, setWeather] = useState(JSON.parse(localStorage.getItem('weather-data')));
   const [input, setInput] = useState(false);
   const [isFormActive, setFormActive] = useState(false);
   const [dataStatus, setDataStatus] = useState(false);
@@ -52,6 +58,9 @@ function App() {
 
                         setWeather(data);
                         setDataStatus(false);
+                            localStorage.setItem('weather-data', JSON.stringify(data));
+
+
                       })
 
                   })
