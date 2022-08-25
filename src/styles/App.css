@@ -41,6 +41,14 @@
   color: white;
 }
 
+@media (max-width:500px) {
+  .item h1 {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 .weather-info {
   width: 100%;
   display: flex;
