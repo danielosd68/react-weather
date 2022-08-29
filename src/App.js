@@ -24,6 +24,7 @@ function App() {
     }
 
     else {
+      document.querySelector('.form form').classList.remove('error');
       setInput(false);
       setWeather(false);
       setDataStatus(!dataStatus);
@@ -72,7 +73,8 @@ function App() {
         </div>
 
       </>}
-
+      <h3 className="copyright">Copyright Chyliński Daniel</h3>
+      <h5 className="copyright">Dane dostarczane przez OpenWeather Map</h5>
     </div>
   )
 

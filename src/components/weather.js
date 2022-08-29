@@ -4,15 +4,22 @@ const Weather = (props) => {
     return (
         <>
             <div className="item">
-                <h1>Miejscowość: {props.city}</h1>
+                <h1>{props.city}</h1>
                 <div className="weather-info">
                     <div className="weather-info-item">
                         <h3>{props.description}</h3>
-                        <ul>
-                            <li>Odczuwalna: {props.realfeel} st. C</li>
-                            <li>Ciśnienie: {props.pressure} hPa</li>
-                            <li>Prędkość wiatru: {props.windspeed} km/h</li>
-                        </ul>
+
+                        <div className="weather-info-item-box">
+                            <p>Odczuwalna: </p>{props.realfeel} st. C <i className="bi bi-thermometer-half"></i>
+                        </div>
+                        <div className="weather-info-item-box">
+                            <p>Ciśnienie: </p>{props.pressure} hPa <i className="bi bi-arrow-down-up"></i>
+                        </div>
+                        <div className="weather-info-item-box">
+                            <p>Prędkość wiatru: </p>{props.windspeed} km/h <i className="bi bi-speedometer"></i>
+                        </div>
+
+
                     </div>
                     <div className="weather-info-item">
                         <p id="temperature">{props.temperature}</p> <p id="st">st. C</p>
