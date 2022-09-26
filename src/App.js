@@ -54,7 +54,7 @@ function App() {
       {error !== false ? <Error error={error} exit={() => { setError(false) }} /> : ""}
 
       <div className="icon">
-        <i className="bi bi-binoculars" onClick={() => { setFormActive(!isFormActive) }}></i>
+        <i className="bi bi-search" onClick={() => { setFormActive(!isFormActive) }}></i>
 
         {isFormActive !== false ? <div className="form">
           <form>

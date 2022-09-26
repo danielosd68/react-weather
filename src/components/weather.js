@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Forecast from "./forecast";
 
 const Weather = (props) => {
     return (
@@ -25,6 +26,7 @@ const Weather = (props) => {
                         <p id="temperature">{props.temperature}</p> <p id="st">st. C</p>
                     </div>
                 </div>
+                <Forecast />
             </div>
         </>
     )
