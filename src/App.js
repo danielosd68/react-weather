@@ -65,7 +65,7 @@ function App() {
 
       </div>
 
-      {weather == false ? <h1 className="hello-header">Witaj! Sprawdź aktualną pogodę!</h1> : <>
+      {weather === false ? <h1 className="hello-header">Witaj! Sprawdź aktualną pogodę!</h1> : <>
 
 
         <div className="content">

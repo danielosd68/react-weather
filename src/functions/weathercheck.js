@@ -1,5 +1,5 @@
 export default function downloadData(city) {
-    const API = "5f924e66209d86f699933ccbf1072991";
+    const API = process.env.REACT_APP_API_KEY;
 
     return new Promise((resolve, reject) => {
         fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API}`)
@@ -11,8 +11,6 @@ export default function downloadData(city) {
                 else {
                     const data = response.json();
                     let city = null;
-                    let description = null;
-                    let temperature = null;
 
                     data
                         .then((res) => {
