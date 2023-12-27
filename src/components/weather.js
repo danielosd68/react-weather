@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Forecast from "./forecast";
 import '../styles/App.css';
 
 const Weather = (props) => {
@@ -25,11 +24,10 @@ const Weather = (props) => {
                     </div>
                     <div className="row">
                         <p><b>Prędkość wiatru</b></p>
-                        <p>{props.windspeed} hPa</p>
+                        <p>{props.windspeed} km/h</p>
                     </div>
                 </div>
 
-                <Forecast />
             </div>
         </>
     )
