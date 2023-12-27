@@ -66,9 +66,19 @@
 }
 
 .weather-info-item {
-  order: 2;
   margin-left: 20px;
   margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.weather-info-item #temperature {
+  margin-right: 15px;
+}
+
+.weather-info-item #st{
+  margin-top: 30px;
 }
 
 div.weather-info-item:nth-child(1) {
@@ -88,7 +98,6 @@ div.weather-info-item:nth-child(1) h3 {
 }
 
 .weather-info-item:nth-child(2) {
-  order: 1;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -280,4 +289,10 @@ div.weather-info-item:nth-child(1) h3 {
 
 .forecast-item-weather-info-description {
   color: rgb(179, 177, 177);
+}
+
+.details .row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
