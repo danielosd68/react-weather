@@ -112,6 +112,10 @@ div.weather-info-item:nth-child(1) h3 {
   color: white;
 }
 
+.form{
+  width: 300px;
+}
+
 .form form {
   background-color: white;
   height: 40px;
@@ -133,6 +137,7 @@ div.weather-info-item:nth-child(1) h3 {
 
   .city {
     width: calc(100% - 50px);
+
   }
 }
 
@@ -144,7 +149,7 @@ div.weather-info-item:nth-child(1) h3 {
   border: none;
   box-sizing: border-box;
   padding: 10px;
-  font-size: 22px;
+  font-size: 13px;
 }
 
 
@@ -153,10 +158,14 @@ div.weather-info-item:nth-child(1) h3 {
   outline: none;
 }
 
+.form form input{
+  width: 80%;
+}
+
 .form form button {
   background-color: white;
   border: none;
-  width: 50px;
+  width: 20%;
 }
 
 @keyframes loading-circle {
@@ -198,6 +207,7 @@ div.weather-info-item:nth-child(1) h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .error-content {
@@ -206,10 +216,18 @@ div.weather-info-item:nth-child(1) h3 {
   background-color: rgb(99, 98, 98);
   color: white;
   padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-content h1{
+  margin-top: 0;
 }
 
 #error-btn {
-  width: 100px;
+  width: 150px;
   height: 40px;
   font-size: 18px;
   border: none;
@@ -218,6 +236,7 @@ div.weather-info-item:nth-child(1) h3 {
   border-radius: 40px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 #error-btn:hover {

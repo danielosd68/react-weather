@@ -2,9 +2,9 @@ const Error = (props) => {
     return (
         <div className="error-container">
             <div className="error-content">
-                <h1>Błąd!</h1>
+                <h1>Kurza twarz!...</h1>
                 <p>{props.error}</p>
-                <button id="error-btn" onClick={props.exit}>Ok</button>
+                <button id="error-btn" onClick={props.exit}>Ehh... Okej</button>
             </div>
         </div>
     )
